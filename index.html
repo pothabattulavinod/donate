@@ -43,23 +43,27 @@
       border-radius: 8px;
     }
     .button-group {
+      margin-top: 1em;
+    }
+    .button-wrapper {
+      width: 100%;
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
-      gap: 10px;
-      margin: 1em 0;
+      margin-bottom: 10px;
     }
     .upi-button {
-      flex: 1 1 120px;
-      padding: 12px 16px;
+      display: block;
+      width: 100%;
+      max-width: 300px;
+      padding: 14px 20px;
       font-size: 16px;
       background-color: #27ae60;
       color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
       text-align: center;
       text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      box-sizing: border-box;
     }
     .upi-button:hover {
       background-color: #1e8449;
@@ -97,11 +101,10 @@
       font-size: 0.9em;
       color: #aaa;
     }
-
-    /* Responsive tweaks */
-    @media (max-width: 480px) {
+    @media (max-width: 360px) {
       .upi-button {
-        flex: 1 1 100%;
+        font-size: 15px;
+        padding: 12px;
       }
     }
   </style>
@@ -125,9 +128,15 @@
     </div>
 
     <div class="button-group">
-      <a class="upi-button" href="upi://pay?pa=pothabattulavinodyadav@ybl&pn=Vinod%20Yadav&am=100&cu=INR">Donate ₹100</a>
-      <a class="upi-button" href="upi://pay?pa=pothabattulavinodyadav@ybl&pn=Vinod%20Yadav&am=500&cu=INR">Donate ₹500</a>
-      <a class="upi-button" href="upi://pay?pa=pothabattulavinodyadav@ybl&pn=Vinod%20Yadav&am=1000&cu=INR">Donate ₹1000</a>
+      <div class="button-wrapper">
+        <a class="upi-button" href="upi://pay?pa=pothabattulavinodyadav@ybl&pn=Vinod%20Yadav&am=100&cu=INR">Donate ₹100</a>
+      </div>
+      <div class="button-wrapper">
+        <a class="upi-button" href="upi://pay?pa=pothabattulavinodyadav@ybl&pn=Vinod%20Yadav&am=500&cu=INR">Donate ₹500</a>
+      </div>
+      <div class="button-wrapper">
+        <a class="upi-button" href="upi://pay?pa=pothabattulavinodyadav@ybl&pn=Vinod%20Yadav&am=1000&cu=INR">Donate ₹1000</a>
+      </div>
     </div>
 
     <div class="notice">📱 Works best on mobile with UPI apps like GPay, PhonePe, Paytm</div>
@@ -135,10 +144,12 @@
     <h2 style="text-align:center">🙏 Our Amazing Donors</h2>
     <div class="donor-list">
       <div class="donor">🌟 <strong>Ravi Kumar</strong> — ₹500<br>“Wishing you great success!”</div>
+      <div class="donor">🌟 <strong>Anjali Mehta</strong> — ₹1000<br>“Keep going, small towns need you!”</div>
+      <div class="donor">🌟 <strong>Sachin Rao</strong> — ₹100<br>“All the best Vinod!”</div>
     </div>
 
     <footer>
-      &copy; 2025 Orifice Delivery 
+      &copy; 2025 Orifice Delivery
     </footer>
   </div>
 </body>
