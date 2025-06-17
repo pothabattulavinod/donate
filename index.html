@@ -42,27 +42,41 @@
       border: 1px solid #ccc;
       border-radius: 8px;
     }
+    .button-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin: 1em 0;
+    }
     .upi-button {
-      padding: 12px 24px;
+      flex: 1 1 120px;
+      padding: 12px 16px;
       font-size: 16px;
       background-color: #27ae60;
       color: white;
       border: none;
       border-radius: 6px;
       cursor: pointer;
+      text-align: center;
       text-decoration: none;
-      margin: 0.5em;
     }
     .upi-button:hover {
       background-color: #1e8449;
-    }
-    .button-group {
-      text-align: center;
     }
     .notice {
       text-align: center;
       color: #777;
       margin-top: 1em;
+    }
+    .thank-you {
+      background-color: #e9ffe9;
+      padding: 1em;
+      border-radius: 10px;
+      margin: 2em 0;
+      text-align: center;
+      color: #2e7d32;
+      font-weight: bold;
     }
     .donor-list {
       background-color: #f0f8ff;
@@ -77,20 +91,18 @@
     .donor:last-child {
       border-bottom: none;
     }
-    .thank-you {
-      background-color: #e9ffe9;
-      padding: 1em;
-      border-radius: 10px;
-      margin: 2em 0;
-      text-align: center;
-      color: #2e7d32;
-      font-weight: bold;
-    }
     footer {
       text-align: center;
       margin-top: 3em;
       font-size: 0.9em;
       color: #aaa;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 480px) {
+      .upi-button {
+        flex: 1 1 100%;
+      }
     }
   </style>
 </head>
@@ -123,7 +135,6 @@
     <h2 style="text-align:center">🙏 Our Amazing Donors</h2>
     <div class="donor-list">
       <div class="donor">🌟 <strong>Ravi Kumar</strong> — ₹500<br>“Wishing you great success!”</div>
-    
     </div>
 
     <footer>
